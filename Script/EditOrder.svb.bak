@@ -1,0 +1,22 @@
+﻿'USEUNIT FunctionLibrary
+
+Sub EditRecord
+  Call LaunchApp
+  Call OpenSavedRecord
+  'Call VerifyNoOfRecords
+  Call SelectRecord
+  Call SelectMenu("Orders", "Edit order...")
+  Call SelectProduct("FamilyAlbum")
+  Call EnterQuantity(10)
+  Call EnterPrice("$10")
+  Call EnterDate("13/09/2020")
+  Call EnterCustomerName("Sai")
+  Call EnterStreet("Temple Street")
+  Call SelectCard
+  Call EnterCardNo(0987654321)
+  Call EnterExpDate("31/12/2022")
+  Call ClickOkButton
+  Call SaveEditedOrder
+  Call CloseApp
+   
+End Sub

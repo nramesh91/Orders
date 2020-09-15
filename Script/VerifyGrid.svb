@@ -1,0 +1,25 @@
+﻿'USEUNIT FunctionLibrary
+
+Sub VerifyGrid
+  Call LaunchApp
+  Call MaximizeMainFormWindow
+  Call SelectMenu("Orders", "New order...")
+  Call SelectProduct("ScreenSaver")
+  Call EnterQuantity(5)
+  Call EnterPrice("$20")
+  Call EnterDiscount("10%")
+  Call EnterDate("09/11/2020")
+  Call EnterCustomerName("Bhavith")
+  Call EnterStreet("Rich street")
+  Call EnterCity("Tirupati")
+  Call EnterState("AP")
+  Call EnterZip("517541")
+  Call SelectCard
+  Call EnterCardNo(123456789012)
+  Call EnterExpDate("12/31/2020")
+  Call VerifyTotal(100)
+  Call ClickOkButton
+  Call VerifyOrderDetails()
+  
+  'Call CloseApp
+End Sub

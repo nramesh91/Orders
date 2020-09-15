@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{9252F941-DB23-4FCA-AA50-858B33BB4A19}" version="11.40">
+	<children>
+		<child name="CreateOrder" key="{5902EEAA-39E6-46F8-84FB-5B2E86FB78AE}" path="CreateOrder.svb" />
+		<child name="EditOrder" key="{F708611F-52FA-47B9-ADB9-E86C1A425888}" path="EditOrder.svb" />
+		<child name="FunctionLibrary" key="{07AE9D0E-64E9-4DD9-AE04-0F2DBEBBBF8F}" path="FunctionLibrary.svb" />
+		<child name="VerifyGrid" key="{62A6457F-EC25-484D-A76A-40D4B2334FD2}" path="VerifyGrid.svb" />
+		<child name="Unit1" key="{1BD5CCE3-A834-4AC6-8B4F-8C613380F961}" path="Unit1.svb" />
+	</children>
+</Root>

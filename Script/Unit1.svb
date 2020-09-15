@@ -1,0 +1,8 @@
+﻿Sub Test1()
+  'Clicks the 'OrdersView' object.
+  Call Aliases.Orders.MainForm.OrdersView.Click(84, 327)
+  'Clicks the '5' subitem of the 'Bhavith' item of the 'OrdersView' list view.
+  Call Aliases.Orders.MainForm.OrdersView.ClickItem("Bhavith", "5")
+  'Clicks the 0 subitem of the 'Bhavith' item of the 'OrdersView' list view.
+  Call Aliases.Orders.MainForm.OrdersView.Text
+End Sub
