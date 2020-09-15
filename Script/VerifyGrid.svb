@@ -20,6 +20,4 @@ Sub VerifyGrid
   Call VerifyTotal(100)
   Call ClickOkButton
   Call VerifyOrderDetails()
-  
-  'Call CloseApp
 End Sub
