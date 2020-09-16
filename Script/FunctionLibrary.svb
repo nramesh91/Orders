@@ -87,7 +87,7 @@ End Sub
 
 Sub SaveOrder(orderName)
   Call Aliases.Orders.MainForm.MainMenu.Click("File|Save")
-  Call Aliases.Orders.dlgSaveAs.DUIViewWndClassName.Explorer_Pane.FloatNotifySink.ComboBox.SetText(Project.Path &"TestFiles\"&orderName)
+  Call Aliases.Orders.dlgSaveAs.DUIViewWndClassName.Explorer_Pane.FloatNotifySink.ComboBox.SetText(Project.Path &"TestFiles\"&orderName&DatePart("d", Now)&DatePart("h", Now)&DatePart("n", Now)&DatePart("s", Now))
   Call Aliases.Orders.dlgSaveAs.btnSave.ClickButton
 End Sub
 
@@ -116,12 +116,86 @@ Sub SaveEditedOrder
   Call Aliases.Orders.MainForm.MainMenu.Click("File|Save")
 End Sub
 
-Sub VerifyOrderDetails()
-  Log.Message(Aliases.Orders.MainForm.OrdersView.Parent.ColumnName.Text)
-  If (StrComp(Aliases.Orders.MainForm.OrdersView.ClickItem(0, 0), "Bhavith")) Then
-    Log.Message("Customer name matched")
+Sub VerifyOrderDetails(cName, pName, qty, date, street, city, state, zipCode, cardType, cardNo, expDate)
+  'Log.Message(Aliases.Orders.MainForm.OrdersView.Parent.ColumnName.Text)
+  Set grid=Sys.Process("Orders").WinFormsObject("MainForm").WinFormsObject("OrdersView")
+  Set tab= OCR.Recognize(grid).AsTable(True)
+  
+  res = StrComp(tab.Cell(0, 0).Text, cName)
+  If (res = 0) Then
+    Log.Message("Customer Name matched")
   Else
-    Log.Erro("Customer name did not match")
+    Log.Error("Customer Name did not match")
+  End If
+  
+  res = StrComp(tab.Cell(0, 1).Text, pName)
+  If (res = 0) Then
+    Log.Message("Product matched")
+  Else
+    Log.Error("Product did not match")
+  End If
+  
+  res = StrComp(tab.Cell(0, 2).Text, CStr(qty))
+  If (res = 0) Then
+    Log.Message("Quantity matched")
+  Else
+    Log.Error("Quantity did not match")
+  End If
+  
+  res = StrComp(tab.Cell(0, 3).Text, date)
+  If (res = 0) Then
+    Log.Message("Date matched")
+  Else
+    Log.Error("Date did not match")
+  End If
+  
+  res = StrComp(tab.Cell(0, 4).Text, street)
+  If (res = 0) Then
+    Log.Message("Street matched")
+  Else
+    Log.Error("Street did not match")
+  End If
+  
+  res = StrComp(tab.Cell(0, 5).Text, city)
+  If (res = 0) Then
+    Log.Message("City matched")
+  Else
+    Log.Error("City did not match")
+  End If
+  
+  res = StrComp(tab.Cell(0, 6).Text, state)
+  If (res = 0) Then
+    Log.Message("State matched")
+  Else
+    Log.Error("State did not match")
+  End If
+  
+  res = StrComp(tab.Cell(0, 7).Text, CStr(zipCode))
+  If (res = 0) Then
+    Log.Message("ZIP code matched")
+  Else
+    Log.Error("ZIP code did not match")
+  End If
+  
+  res = StrComp(tab.Cell(0, 8).Text, cardType)
+  If (res = 0) Then
+    Log.Message("Card Type matched")
+  Else
+    Log.Error("Card Type did not match")
+  End If
+  
+  res = StrComp(tab.Cell(0, 9).Text, CStr(cardNo))
+  If (res = 0) Then
+    Log.Message("Card No matched")
+  Else
+    Log.Error("Card No did not match")
+  End If
+  
+  res = StrComp(tab.Cell(0, 10).Text, expDate)
+  If (res = 0) Then
+    Log.Message("Expiration Date matched")
+  Else
+    Log.Error("Expiration Date did not match")
   End If
 End Sub
 

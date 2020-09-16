@@ -19,5 +19,7 @@ Sub VerifyGrid
   Call EnterExpDate("12/31/2020")
   Call VerifyTotal(100)
   Call ClickOkButton
-  Call VerifyOrderDetails()
+  Call VerifyOrderDetails("Bhavith", "Screen Saver", 5, "9/11/2020", "Rich street", "Tirupati", "AP", 517541, "MasterCard", 123456789012, "12/31/2020")
+  Call SaveOrder("Order")
+  Call CloseApp
 End Sub

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{24B6FA0B-0143-461A-9758-AEB9E9A9428B}" version="14.0" key="{ADE72A4C-92AB-47B8-9DEB-0D8CD70919F8}">
+	<children>
+		<child name="OrdersAutomation" key="{A0AA72EB-1D1B-4F1E-A642-4CD2C7ED0FE8}" path="OrdersAutomation.mds" />
+	</children>
+	<testItems key="{59F83EAC-D766-466A-9E58-2F42C028F958}">
+		<children>
+			<testItem key="{A0AA72EB-1D1B-4F1E-A642-4CD2C7ED0FE8}" enabled="True" timeout="0" stopOnError="True" description="" />
+		</children>
+	</testItems>
+	<variables key="{C357CE1B-A497-466E-AC11-EE7F954EA655}" />
+	<analysis key="{55F682CA-87DE-4685-B720-91A4A54DA270}" />
+	<scc key="{C900492B-D218-429C-9AA0-264B7D78CA88}" name="Git Plugin">
+		<data />
+	</scc>
+	<extender key="{1A3FC97E-9A66-4716-B166-35D10B4146E0}">
+		<CrossBrowserTesting Enable="False" />
+	</extender>
+</Root>
