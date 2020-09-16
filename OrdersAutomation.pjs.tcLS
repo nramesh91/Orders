@@ -20,14 +20,14 @@
 <Nodes version="1">
 	<Node name="root">
 		<Node name="data">
-			<Node name="{17a4ec69-a42a-47b0-a27c-d1754820b862}">
+			<Node name="{24b6fa0b-0143-461a-9758-aeb9e9a9428b}">
+				<Prp name="default project" type="S" value="{A0AA72EB-1D1B-4F1E-A642-4CD2C7ED0FE8}"/>
+			</Node>
+			<Node name="{a0aa72eb-1d1b-4f1e-a642-4cd2c7ed0fe8}">
 				<Prp name="relpath" type="S" value="OrdersAutomation.mds.tcLS"/>
 			</Node>
-			<Node name="{24b6fa0b-0143-461a-9758-aeb9e9a9428b}">
-				<Prp name="default project" type="S" value="{17A4EC69-A42A-47B0-A27C-D1754820B862}"/>
-			</Node>
 			<Node name="logs">
-				<Prp name="key" type="S" value="{779839E0-5B7E-4A14-ABE5-0D3E9D42D3E7}"/>
+				<Prp name="key" type="S" value="{EEC8DE95-40B1-4F1B-BE9B-4E969511361E}"/>
 				<Prp name="relpath" type="S" value="Log"/>
 			</Node>
 			<Node name="variables"/>

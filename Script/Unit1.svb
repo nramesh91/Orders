@@ -1,8 +1,12 @@
 ﻿Sub Test1()
-  'Clicks the 'OrdersView' object.
-  Call Aliases.Orders.MainForm.OrdersView.Click(84, 327)
+  'Clicks the 0 subitem of the 'Bhavith' item of the 'OrdersView' list view.
+  Call Aliases.Orders.MainForm.OrdersView.ClickItem("Bhavith", 0)
+  'Clicks the 'ScreenSaver' subitem of the 'Bhavith' item of the 'OrdersView' list view.
+  Call Aliases.Orders.MainForm.OrdersView.ClickItem("Bhavith", "ScreenSaver")
   'Clicks the '5' subitem of the 'Bhavith' item of the 'OrdersView' list view.
   Call Aliases.Orders.MainForm.OrdersView.ClickItem("Bhavith", "5")
-  'Clicks the 0 subitem of the 'Bhavith' item of the 'OrdersView' list view.
-  Call Aliases.Orders.MainForm.OrdersView.Text
+  'Clicks the '9/11/2020' subitem of the 'Bhavith' item of the 'OrdersView' list view.
+  Call Aliases.Orders.MainForm.OrdersView.ClickItem("Bhavith", "9/11/2020")
+  'Clicks the 'Rich street' subitem of the 'Bhavith' item of the 'OrdersView' list view.
+  Call Aliases.Orders.MainForm.OrdersView.ClickItem("Bhavith", "Rich street")
 End Sub

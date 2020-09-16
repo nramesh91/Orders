@@ -117,7 +117,7 @@ Sub SaveEditedOrder
 End Sub
 
 Sub VerifyOrderDetails()
-  Log.Message(Aliases.Orders.MainForm.OrdersView.wSelectedItems)
+  Log.Message(Aliases.Orders.MainForm.OrdersView)
   If (StrComp(Aliases.Orders.MainForm.OrdersView.ClickItem(0, 0), "Bhavith")) Then
     Log.Message("Customer name matched")
   Else
